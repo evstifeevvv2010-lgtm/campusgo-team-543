@@ -8,12 +8,12 @@
 :root{color-scheme:light dark}
 body{margin:0}
 /* Layout: шапка-полоса + одна колонка 760px: список -> карточка -> форма заявки */
-:root{--bg:#f3f5fa;--fg:#1b2233;--muted:#5a6479;--card:#ffffff;--line:#dde2ee;--accent:#2f4fd8;--on-accent:#ffffff;--err:#b00020;--ok:#1b7f3b;
+:root{--bg:#fff6e0;--fg:#2a1633;--muted:#6b4a73;--card:#ffffff;--line:#ffcf8a;--accent:#d6246e;--on-accent:#ffffff;--err:#b00020;--ok:#1b7f3b;
   --font:"Manrope",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1420;--fg:#e8ecf6;--muted:#9aa5bd;--card:#18202f;--line:#2a3347;--accent:#7b93ff;--on-accent:#0f1420;--err:#ff8a9b;--ok:#5fd68a;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0f1420;--fg:#e8ecf6;--muted:#9aa5bd;--card:#18202f;--line:#2a3347;--accent:#7b93ff;--on-accent:#0f1420;--err:#ff8a9b;--ok:#5fd68a;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1022;--fg:#fbeaff;--muted:#d1a8dc;--card:#291834;--line:#5a2f6b;--accent:#ff6fa8;--on-accent:#1a1022;--err:#ff8a9b;--ok:#5fd68a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1a1022;--fg:#fbeaff;--muted:#d1a8dc;--card:#291834;--line:#5a2f6b;--accent:#ff6fa8;--on-accent:#1a1022;--err:#ff8a9b;--ok:#5fd68a;color-scheme:dark}
 body{font-family:var(--font);background:var(--bg);color:var(--fg);line-height:1.5;font-size:16px}
-header{background:var(--accent);color:var(--on-accent);padding-block:18px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{background:linear-gradient(90deg,var(--accent),#ff8a00);color:var(--on-accent);padding-block:18px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 header h1{margin:0;font-size:1.6rem}
 main{max-width:760px;margin:0 auto;padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h2{text-wrap:balance}
@@ -60,10 +60,10 @@ input{width:100%;padding:9px;box-sizing:border-box;font:inherit;background:var(-
 <script>
 // Тестовые данные (технический долг TD-01: данные записаны в коде)
 const events = [
-  {id:1, title:"День открытых дверей", date:"15.11.2026", place:"Актовый зал, корпус 1", description:"Знакомство с колледжем, специальностями и студенческими клубами."},
+  {id:1, title:"День музыки", date:"15.11.2026", place:"Актовый зал", description:"Дискотека в ретро стиле в актовом зале."},
   {id:2, title:"Хакатон «Код кампуса»", date:"22.11.2026", place:"Компьютерный класс 305", description:"Командное соревнование: за 6 часов нужно собрать прототип сервиса."},
   {id:3, title:"Спортивный турнир по волейболу", date:"29.11.2026", place:"Спортивный зал", description:"Турнир между группами колледжа. Команды по 6 человек."},
-  {id:4, title:"Вечер настольных игр", date:"05.12.2026", place:"Библиотека, 2 этаж", description:"Неформальная встреча студентов, игры и чай."}
+  {id:4, title:"Вечер соревновательных игр", date:"05.12.2026", place:"каб. 411, этаж 4", description:"Встреча студентов, игры, чай и печенки."}
 ];
 let current = null;
 
